@@ -1,0 +1,15 @@
+
+.thumbnail{
+    min-height: 20px;
+    padding: 12px;
+    background: rgb(149, 149, 150);
+}
+.pad-left{
+    margin-left: 10px;
+}
+.well div{
+    color: rgb(33 53 36);
+}
+.green{
+    color: rgba(165, 14, 165, 0.589) !important;
+}

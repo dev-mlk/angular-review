@@ -1,0 +1,22 @@
+
+ <div class="well horerwell thumbnail m-1">
+    <h4>{{event?.name}}</h4>
+   
+    <div>Date: {{ event?.date }} </div>
+    
+    <div [class.green]="event?.time === '9:00 am'" [ngSwitch]="event?.time">
+       Time: {{ event?.time }}
+        <span *ngSwitchCase="'8:00 am'">(Early start)</span>
+        <span *ngSwitchCase="'10:00 am'">(Late start)</span>
+        <span *ngSwitchDefault>(Normal start)</span>
+    </div>
+    <div>Price: ${{ event?.price }}</div>
+    <div *ngIf="event?.location">
+        <span>Location: {{ event?.location?.address }}</span>
+        <span class="pad-left">{{ event?.location?.city }}, {{ event?.location?.city }}</span>
+    </div>
+    <div *ngIf="event?.onlineUrl">
+        online Url: {{ event?.onlineUrl }}
+    </div>
+    
+</div>
